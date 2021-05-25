@@ -20,7 +20,29 @@ function detectWebGLContext() {
     }
   }
 
+  if(supported) {
+    gl = canvas.getContext('webgl');
+    if(testPrecision(gl, 'highp')) {
+      supported.push('highp');
+    } else if(testPrecision(gl, 'mediump')) {
+      supported.push('mediump');
+    } else if(testPrecision(gl, 'lowp')) {
+      supported.push('lowp');
+    }
+  }
+
   return supported;
+}
+
+function testPrecision(gl, precision) {
+  var fragmentSource = 'precision ' + precision + ' float;\nvoid main(){}';
+  var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+  gl.shaderSource(fragmentShader, fragmentSource);
+  gl.compileShader(fragmentShader);        
+  if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+    return false;
+  }
+  return true;
 }
 
 function getDeviceSpec() {
@@ -81,7 +103,7 @@ function getDeviceSpec() {
   // specification.address_bar_height = document.getElementById('control-height').clientHeight - window.innerHeight;
   // specification.address_bar_height2 = screen.height - window.innerHeight;
 
-  // document.getElementById('json').textContent = JSON.stringify(specification, null, 2);
+  document.getElementById('json').textContent = JSON.stringify(specification, null, 2);
 
   return specification;
 }
