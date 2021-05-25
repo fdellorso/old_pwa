@@ -1,0 +1,63 @@
+<html>
+<head>
+  <style>
+    div{
+      height:50px;
+      width:100%;
+      background:orange;
+      margin-bottom:10px;
+      transition:1s;
+    }
+  </style>
+</head>
+  <body onscroll="animate()">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      var div = document.querySelectorAll('div');
+      function animate(){
+        for(var i=0;i<div.length;i++){
+          if(div[i].getBoundingClientRect().top > document.body.clientHeight ||
+            div[i].getBoundingClientRect().bottom < 0){
+              div[i].style.width="5px";
+              div[i].style.opacity="0";
+          } else {
+            div[i].style.width="100%";
+            div[i].style.opacity="1";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

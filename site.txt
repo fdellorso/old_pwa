@@ -1,0 +1,8 @@
+https://www.freecodecamp.org/news/exploring-device-detection-for-better-user-experiences-in-2020/
+https://stackoverflow.com/questions/54356708/wkwebview-window-innerwidth-reporting-wrong-value
+https://gist.github.com/paulirish/5d52fb081b3570c81e3a
+https://kellegous.com/j/2013/01/26/layout-performance/
+https://levelup.gitconnected.com/auto-detecting-mobile-devices-screen-orientation-ddcf9554b45b
+https://interactjs.io
+http://www.lighterra.com/papers/videoencodingh264/
+

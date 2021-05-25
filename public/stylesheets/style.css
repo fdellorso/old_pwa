@@ -1,0 +1,61 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+pre {
+  margin: 0;
+  font-size: large;
+}
+
+button {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  z-index: 1;
+}
+
+#control-height {
+  height: 100vh;
+  width: 0;
+  position: absolute;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: table;
+}
+
+#poverlay {
+  font-size: 4em;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#sidel, #sider, #center {
+  float: left;
+}
+
+#sidel {
+  background-color:cadetblue;
+}
+
+#sider {
+  background-color:coral;
+}
+
+#center {
+  background-color: chartreuse;
+}
+
+#psidel, #pcenter, #psider  {
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+}
